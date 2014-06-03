@@ -2,6 +2,7 @@
     "channels": ["#channel"],
     "server": "irc.freenode.net",
     "botName": "bot",
+    "password": "",
     "twitterKey": "",
     "twitterSecret": "",
     "twitterAccessTokenSecret": "",

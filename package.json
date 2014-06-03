@@ -1,0 +1,25 @@
+{
+  "name": "vesselbot",
+  "version": "0.0.1",
+  "description": "node irc bot",
+  "main": "index.js",
+  "dependencies": {
+    "nconf": "~0.6.7",
+    "irc": "~0.3.7",
+    "node-twitter-api": "~1.2.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.2.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ednapiranha/node-no-plebs.git"
+  },
+  "keywords": ["leveldb", "comments"],
+  "author": "Edna Piranha <jen@ednapiranha.com> (http://ednapiranha.com)",
+  "license": "BSD"
+}

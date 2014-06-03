@@ -31,8 +31,7 @@ client.addListener('message', function (from, to, message) {
       if (err) {
         console.error(err);
       } else {
-        console.log(tid);
-        client.say(message.channel, 'tweeted: https://twitter.com/virtualwhatever/status/' + tid);
+        client.say(to, 'tweeted: https://twitter.com/virtualwhatever/status/' + tid);
       }
     });
   }

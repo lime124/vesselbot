@@ -27,12 +27,12 @@ client.addListener('message', function (from, to, message) {
   console.log(from + ' => ' + to + ': ' + message);
 
   if (message.match(/^(\.vw )/i)) {
-    tw.tweet(message.split('.vw ')[1], function (err, id) {
+    tw.tweet(message.split('.vw ')[1], function (err, tid) {
       if (err) {
         console.error(err);
       } else {
-        // hack for tracking this channel until I sort it out later
-        client.say(nconf.get('channels')[0], 'tweeted: https://twitter.com/virtualwhatever/status/' + id);
+        console.log(tid);
+        client.say(message.channel, 'tweeted: https://twitter.com/virtualwhatever/status/' + tid);
       }
     });
   }

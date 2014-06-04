@@ -3,6 +3,7 @@
     "server": "irc.freenode.net",
     "botName": "bot",
     "password": "",
+    "twitterNick": "",
     "twitterKey": "",
     "twitterSecret": "",
     "twitterAccessTokenSecret": "",

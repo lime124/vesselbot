@@ -4,11 +4,13 @@ var irc = require('irc');
 var nconf = require('nconf');
 var Twitter = require('./lib/twitter');
 var Ascii = require('./lib/ascii');
+var Cats = require ('./lib/cats');
 
 nconf.argv().env().file({ file: 'config.json' });
 
 var tw = new Twitter(nconf);
 var ascii = new Ascii();
+var cats = new Cats();
 
 var client = new irc.Client(nconf.get('server'), nconf.get('botName'), {
   channels: nconf.get('channels'),
@@ -35,8 +37,9 @@ client.addListener('message', function (from, to, message) {
       }
     });
   } else if (message.match(/^(\.draw )/i)) {
-    var face = ascii.draw(message.split('.draw ')[1]);
-    client.say(to, face);
+    client.say(to, ascii.draw(message.split('.draw ')[1]));
+  } else if (message.match(/^(\.cat )/i)) {
+    client.say(to, cats.pic(message.split('.cat ')[1]));
   }
 });
 

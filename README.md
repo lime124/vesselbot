@@ -14,5 +14,7 @@ Set up a Twitter application with a callback URL that is empty. Register your bo
 ## Supports
 
 * adding tweets
+* generating ascii faces
+* generating cats
 
 more to come ...

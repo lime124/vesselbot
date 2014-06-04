@@ -35,7 +35,7 @@ client.addListener('message', function (from, to, message) {
       }
     });
   } else if (message.match(/^(\.draw )/i)) {
-    var face = ascii.draw(message.split('.draw ')[1].split(' ')[0]);
+    var face = ascii.draw(message.split('.draw ')[1]);
     client.say(to, face);
   }
 });

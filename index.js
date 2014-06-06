@@ -43,7 +43,7 @@ client.addListener('message', function (from, to, message) {
   } else if (message.match(/^(\.cat )/i)) {
     client.say(to, cats.pic(message.split('.cat ')[1]));
   } else if (message.match(/^(\.dog )/i)) {
-    client.say(to, dogs.pic(message.spli('.dog ')[1]));
+    client.say(to, dogs.pic(message.split('.dog ')[1]));
   }
 });
 

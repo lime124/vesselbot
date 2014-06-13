@@ -33,7 +33,7 @@ client.addListener('message', function (from, to, message) {
   if (message.match(/^(\.vw )/i)) {
     tw.tweet(message.split('.vw ')[1], function (err, tid) {
       if (err) {
-        console.error(err);
+        client.say(to, 'could not tweet: ', err.toString());
       } else {
         client.say(to, 'tweeted: https://twitter.com/' + nconf.get('twitterNick') + '/status/' + tid);
       }

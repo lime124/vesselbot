@@ -21,8 +21,8 @@ client.addListener('registered', function (message) {
 });
 
 client.addListener('message', function (from, to, message) {
-  if (message.match(/jbuck/i)) {
-    client.say(to, 'WE WILL BUILD A WALL AND MAKE JBUCK PAY FOR IT.');
+  if (message.match(/superheroes/i)) {
+    client.say(to, 'http://d.pr/i/C1Es');
   }
 });
 

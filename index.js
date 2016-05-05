@@ -2,8 +2,11 @@
 
 var irc = require('irc');
 var nconf = require('nconf');
+var Heroes = require ('./lib/heroes');
 
 nconf.argv().env().file({ file: 'config.json' });
+
+var heroes = new Heroes();
 
 var client = new irc.Client(nconf.get('server'), nconf.get('botName'), {
   channels: nconf.get('channels'),

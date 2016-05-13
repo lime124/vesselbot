@@ -26,8 +26,13 @@ client.addListener('registered', function (message) {
 client.addListener('message', function (from, to, message) {
   if (message.match(/superheroes/i)) {
     client.say(to, 'http://people.mozilla.org/~ehunt/uxley-bot/superheroes.png');
-} else if (message.match(/^(\.hero )/i)) {
-    client.say(to, heroes.pic(message.split('.hero ')[1]));}
+  } 
+  else if (message.match(/^(\.hero )/i)) {
+    client.say(to, heroes.pic(message.split('.hero ')[1]));
+  }
+  else if (message.match(/.rainbow/i)) {
+    client.say(to, 'http://bit.ly/1rKg6jz');
+  }
 });
 
 client.addListener('error', function (message) {

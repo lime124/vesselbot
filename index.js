@@ -31,7 +31,7 @@ client.addListener('message', function (from, to, message) {
     client.say(to, heroes.pic(message.split('.hero ')[1]));
   }
   else if (message.match(/.rainbow/i)) {
-    client.say(to, 'http://bit.ly/1rKg6jz');
+    client.say(to, 'http://people.mozilla.org/~tshakespeare/bot%20stuff/rainbow.png');
   }
 });
 
